@@ -61,3 +61,7 @@ h5{
     background-color: var(--gnan);
     border: 1px solid black;
 }
+
+p{
+    margin: 20px 20px;
+}
