@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --box: rgb(255, 255, 255);
+    --bg-color: rgb(236, 234, 232);
+    --raks: rgb(244, 190, 203);
+    --gnan: rgb(206, 253, 255);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1{
+    margin: 10px 30px;
+}
+
+.container{
+    padding: 10px;
+    margin: 60px;
+    height:300px;
+    width: 90vw;
+    background-color: var(--box);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgb(40, 32, 33);
+}
+
+h3{
+    margin: 2px 22px;
+    font-size: 20px;
+}
+
+h5{
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.project{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rakshi {
+    margin: 20px;
+    height: 220px;
+    width:90vmin;
+    border-radius: 10px;
+    background-color: var(--raks);
+    border: 1px solid black;
+}
+
+.gnani {
+    margin: 20px;
+    height: 220px;
+    width:90vmin;
+    border-radius: 10px;
+    background-color: var(--gnan);
+    border: 1px solid black;
+}
