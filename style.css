@@ -4,8 +4,9 @@
 }
 
 :root {
-    --box: rgb(255, 255, 255);
     --bg-color: rgb(236, 234, 232);
+    --navbar: rgb(152, 136, 165);
+    --box: rgb(255, 255, 255);
     --raks: rgb(244, 190, 203);
     --gnan: rgb(206, 253, 255);
 }
@@ -14,8 +15,14 @@ body {
     background-color: var(--bg-color);
 }
 
+nav {
+    background-color: var(--navbar);
+    height: 60px;
+    width:100%;
+}
+
 h1{
-    margin: 10px 30px;
+    padding: 10px 30px;
 }
 
 .container{
@@ -50,7 +57,7 @@ h5{
     width:90vmin;
     border-radius: 10px;
     background-color: var(--raks);
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .gnani {
@@ -59,7 +66,7 @@ h5{
     width:90vmin;
     border-radius: 10px;
     background-color: var(--gnan);
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 p{
