@@ -71,7 +71,7 @@ nav {
 .gnani { background: var(--card2); }
 
 .rakshi:hover { background: #f6d5df; }
-.gnani:hover { background: #dff1f9; }
+.gnani:hover { background: #d6edf7; }
 
 .card:hover {
     transform: translateY(-5px);
@@ -111,4 +111,66 @@ a:hover {
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 13px;
+}
+
+@media (max-width: 600px) {
+      nav {
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    nav h1 {
+        font-size: clamp(18px, 5vw, 26px);
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .container {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: #ffffff;
+    }
+
+    .container h3 {
+        font-size: 18px;
+    }
+
+    .project {
+        grid-template-columns: 1fr; 
+        gap: 18px;
+    }
+
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .card h5 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card-links {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .card-links a {
+        flex: 1 1 auto;
+        text-align: center;
+        min-width: 120px;
+    }
 }
