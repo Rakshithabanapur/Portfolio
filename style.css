@@ -8,8 +8,8 @@
 :root {
     --bg: #f2f2f7;
     --navbar: linear-gradient(90deg, #8e44ad, #3498db);
-    --card1: linear-gradient(135deg, #ffe3ec, #fff5f7);
-    --card2: linear-gradient(135deg, #d8f3ff, #eefaff);
+    --card1: linear-gradient(135deg, #fae5ec, #fff5f7);
+    --card2: linear-gradient(135deg, #ecf2f5, #eefaff);
     --container: rgba(255, 255, 255, 0.6);
 }
 
