@@ -21,35 +21,25 @@ body {
 nav {
     background: var(--navbar);
     height: 70px;
-    width: 100%;
     text-align: center;
-    position: sticky;
     display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: center; 
     color: #ffffff;
-    font-weight: bold;
-    font-size: 20px;
     box-shadow: 0 4px 15px #00000033;
-    position: relative;
 }
 .navimage {
-    width:250px;
-    height: 57px;
-    object-fit: cover;
-        position: absolute; 
-        left: 30%;
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+    position: relative;
+    top: 4px;
 }
-.navtext {
-    background: #ffffff;  
-    color: #000000; 
-    font-size: 35px;  
-    width:450px;
-    height: 57px;
-    object-fit: cover;
-        position: absolute; 
-    text-align: center;
-
-    left: 35.5%;
+.navtext { 
+    color: #f1f1f1;
+    font-weight: 600; 
+    font-size: 32px;  
+    line-height: 1;
 }
 
 .container {
