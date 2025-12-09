@@ -25,12 +25,31 @@ nav {
     text-align: center;
     position: sticky;
     display: flex;
-    align-items: center;
-    justify-content: center; 
+    align-items: center; 
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     box-shadow: 0 4px 15px #00000033;
+    position: relative;
+}
+.navimage {
+    width:250px;
+    height: 57px;
+    object-fit: cover;
+        position: absolute; 
+        left: 30%;
+}
+.navtext {
+    background: #ffffff;  
+    color: #000000; 
+    font-size: 35px;  
+    width:450px;
+    height: 57px;
+    object-fit: cover;
+        position: absolute; 
+    text-align: center;
+
+    left: 35.5%;
 }
 
 .container {
@@ -105,13 +124,13 @@ a:hover {
     justify-content: space-between;
 }
 
-.card-links a {
+/* .card-links a {
     background: #4f46e5;
     color: #ffffff;
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 13px;
-}
+} */
 
 @media (max-width: 600px) {
       nav {
