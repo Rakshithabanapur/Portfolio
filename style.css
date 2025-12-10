@@ -206,75 +206,83 @@ nav {
 .ownership-dots {
     position: fixed;
     top: 90px;
-    right: 0;
-    z-index: 1000;
+    right: 14px;
+    z-index: 2000;
     display: flex;
     flex-direction: column;
     gap: 14px;
     align-items: flex-end;
+    pointer-events: auto;
 }
 
 .dot-wrapper {
     position: relative;
     display: flex;
     align-items: center;
+    padding: 6px 2px;
 }
 
 .dot {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    margin-right: 6px;
-    cursor: pointer;
+    flex: 0 0 auto;
     box-shadow:
-        0 0 0 3px #ffffff,
-        0 6px 12px #00000033;
+        0 0 0 4px #ffffff,    
+        0 8px 18px rgba(0,0,0,0.18);
+    cursor: pointer;
 }
 
-.dot.pink {
-    background: #ec4899;
-}
-
-.dot.blue {
-    background: #3b82f6;
-}
+.dot.pink { background: #ec4899; }
+.dot.blue  { background: #3b82f6; }
 
 .dot-tooltip {
     position: absolute;
-    right: 42px;
+    right: calc(100% + 14px); 
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
     background: #ffffff;
     color: #334155;
     font-size: 13px;
     font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
     white-space: nowrap;
-    box-shadow: 0 8px 20px #00000026;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.16);
     opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.26s ease, transform 0.26s ease;
     pointer-events: none;
-    transform: translateX(6px);
-    transition: 0.25s ease;
 }
 
-.dot-tooltip::after {
+.dot-tooltip::after{
     content: "";
     position: absolute;
-    right: -5px;
+    right: -6px;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background: #ffffff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
 }
 
+.dot-wrapper.show-tooltip .dot-tooltip,
 .dot-wrapper:hover .dot-tooltip {
     opacity: 1;
-    transform: translateX(0);
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+    pointer-events: auto;
 }
 
 @media (max-width: 600px) {
-    .dot-tooltip {
-        opacity: 1;
-        transform: none;
-    }
+    .ownership-dots { right: 10px; top: 80px; }
+    .dot { width: 24px; height: 24px; }
+    .dot-tooltip { font-size: 12px; padding: 7px 9px; }
+}
+
+.ownership-dots { animation: ownershipFadeIn 0.5s ease; }
+@keyframes ownershipFadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
