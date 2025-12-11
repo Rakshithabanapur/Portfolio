@@ -32,3 +32,21 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.getElementById("goTop").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const goTopButton = document.getElementById("goTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        goTopButton.style.display = "flex";
+    } else {
+        goTopButton.style.display = "none";
+    }
+});
+
+goTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
