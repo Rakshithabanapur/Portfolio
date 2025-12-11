@@ -2,7 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Inter",  sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.2px;
 }
 
 :root {
@@ -203,7 +208,7 @@ h4{
     top: 50%;
     transform: translateY(-50%) translateX(6px);
     background: #ffffff;
-    color: #334155;
+    color: #7173ef;
     font-size: 13px;
     font-weight: 600;
     padding: 8px 10px;
@@ -263,12 +268,12 @@ h4{
     height: 46px;
     border-radius: 50%;
     border: none;
-    background: #ffffff;
+    background: #8688f3;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    color: #000000;
+    color: #ffffff;
     display: none;
     align-items: center;
     justify-content: center;
@@ -277,7 +282,7 @@ h4{
 }
 
 .floating-top-btn:hover {
-    background: #8688f3;
+    background: #6366f1;
     color: #ffffff;
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
