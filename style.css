@@ -25,27 +25,33 @@ body {
 
 nav {
     background: var(--navbar);
-    height: 55px;
+    min-height: 55px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center; 
     color: #ffffff;
     box-shadow: 0 4px 15px #00000033;
+    padding: 0 12px;
+    flex-wrap: wrap;
 }
+
 .navimage {
     width: auto;
-    height: 55px;
+    max-height: 48px;
     top: 4px;
     left: 0;
 }
+
 .navtext { 
+    font-size: clamp(16px, 4vw, 28px);
     color: #f1f1f1;
     font-weight: 600; 
     font-size: 32px;  
     line-height: 1;
     margin-right: 10px;
 }
+
 .tile {
     font-size: 45px;
     text-align: center;
@@ -85,7 +91,8 @@ nav {
     transition: 0.3s;
     box-shadow: 0 6px 15px #0000001a;
     margin-bottom: 30px;
-    height: 350px;   
+    height: auto; 
+    min-height: unset;  
     overflow: hidden;
 }
 
@@ -108,14 +115,16 @@ nav {
 
 .card-image {
     flex: 0 0 40%;
+    width: 100%;
 }
 
 .card-image img {
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
     border-radius: 12px;
-    height: 300px; 
-    object-fit: cover;  
+    display: block; 
 }
 
 .card-content {
@@ -366,10 +375,9 @@ h4{
     }
 
     .card-image img {
-        height: 200px;
-        width: 100%;
+        aspect-ratio: 4 / 3;
     }
-
+    
     .card-content {
         padding-top: 10px;
     }
@@ -407,6 +415,7 @@ h4{
 
     .card-inner {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .card-image img {
@@ -431,6 +440,14 @@ h4{
     .dot {
         width: 24px;
         height: 24px;
+    }
+
+     .card-image {
+        width: 100%;
+    }
+
+    .card-content {
+        width: 100%;
     }
 }
 
