@@ -9,7 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const cardDotMap = {
         rakshi: document.querySelector(".dot.pink").closest(".dot-wrapper"),
-        gnani: document.querySelector(".dot.blue").closest(".dot-wrapper")
+        gnani: document.querySelector(".dot.blue").closest(".dot-wrapper"),
+        combined: document.querySelector(".dot.combined").closest(".dot-wrapper")
     };
 
     document.querySelectorAll(".card").forEach(card => {
@@ -20,6 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
             if (card.classList.contains("gnani")) {
                 cardDotMap.gnani.classList.add("show-tooltip");
             }
+            if (card.classList.contains("combined")) {
+                cardDotMap.combined.classList.add("show-tooltip");
+            }
         });
 
         card.addEventListener("mouseleave", () => {
@@ -28,6 +32,9 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             if (card.classList.contains("gnani")) {
                 cardDotMap.gnani.classList.remove("show-tooltip");
+            }
+            if (card.classList.contains("combined")) {
+                cardDotMap.combined.classList.remove("show-tooltip");
             }
         });
     });

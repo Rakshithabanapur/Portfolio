@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5 {
     --navbar: linear-gradient(90deg, #8e44ad, #3498db);
     --card1: linear-gradient(135deg, #fae5ec, #fff5f7);
     --card2: linear-gradient(135deg, #ecf2f5, #eefaff);
-    --container: #ffffff99;
+    --card3: linear-gradient(135deg, #fff3e8, #ffe9d8);
 }
 
 body {
@@ -62,7 +62,7 @@ nav {
     width: 88%;
     max-width: 1100px;
     margin:40px auto;
-    background: var(--container);
+    background: var(--bg);
     backdrop-filter: blur(12px);
     padding: 28px;
     border-radius: 20px;
@@ -98,10 +98,10 @@ nav {
 
 .rakshi { background: var(--card1); }
 .gnani { background: var(--card2); }
-
+.combined { background: var(--card3); }
 .rakshi:hover { background: #f6d5df; }
 .gnani:hover { background: #d6edf7; }
-
+.combined:hover { background: #ffe0cc; }
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 12px 25px #00000033;
@@ -209,6 +209,7 @@ h4{
 
 .dot.pink { background: #f1acc1; }
 .dot.blue  { background: #a8d5e9; }
+.dot.combined {background: #ffe0cc;}
 
 .dot-tooltip {
     position: absolute;
@@ -337,6 +338,17 @@ h4{
 .floating-top-btn:hover::before {
     opacity: 1;
     visibility: visible;
+}
+
+.dot.combined {
+    background: --card3;
+}
+.combined {
+    background: --card3;
+}
+
+.combined:hover {
+    background: --card3;
 }
 
 @media (max-width: 370px) {
