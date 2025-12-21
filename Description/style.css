@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fef8f3; /* warm light background */
+  color: #333; /* dark text for readability */
+  height: 100vh;
+}
+
+.arcade { /* you can rename to .layout if you want */
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  background: #ffecd1; /* soft beige */
+  border-right: 2px solid #f4a261; /* food orange accent */
+  padding: 2rem 1.2rem;
+}
+
+.logo {
+  text-align: center;
+  color: #e76f51; /* warm red/orange */
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.level {
+  background: transparent;
+  border: 2px solid #e76f51;
+  color: #e76f51;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.level:hover,
+.level.active {
+  background: #e76f51;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(231, 111, 81, 0.3);
+}
+
+/* SCREEN */
+.screen {
+  flex: 1;
+  padding: 3rem;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* CONTENT PANELS */
+.content {
+  display: none;
+  animation: fade 0.4s ease;
+}
+
+.content.active {
+  display: block;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+  color: #f4a261; /* secondary warm accent */
+  border-bottom: 2px solid #f4a261;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.content p,
+.content li {
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+pre {
+  background: #fff3e6;
+  padding: 1rem;
+  border-left: 4px solid #f4a261;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border-left: 4px solid #f4a261;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  color: #e76f51;
+  margin-bottom: 0.6rem;
+}
+
+.card h4 {
+  color: #f4a261;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.card ul,
+.card ol {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.card li {
+  opacity: 0.9;
+}
+
+.card.highlight {
+  background: #fff7f0;
+  border-left-color: #e76f51;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+
+.card table th,
+.card table td {
+  border: 1px solid #f4a261;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.card table th {
+  background-color: #ffe6cc;
+  color: #e76f51;
+}
+
+.card table td {
+  background-color: #fff3e6;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* ANIMATION */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>LocalBites</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="arcade">
+
+        <!-- LEFT PANEL -->
+        <aside class="sidebar">
+            <h1 class="logo">LocalBites</h1>
+
+            <div class="levels">
+                <button class="level active" data-target="overview">Overview</button>
+                <button class="level" data-target="plan">Plan & Analysis</button>
+                <button class="level" data-target="tech">Tech Stack</button>
+                <button class="level" data-target="setup">Setup</button>
+            </div>
+        </aside>
+
+        <!-- RIGHT PANEL -->
+        <main class="screen">
+            <section class="content active" id="overview">
+                <h2>Project Overview</h2>
+
+                <div class="card">
+                    <h3> Project Name</h3>
+                    <p>
+                        <strong>LocalBites</strong> – Discover authentic local food experiences while traveling.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3> Objective</h3>
+                    <p>LocalBites helps travelers to:</p>
+                    <ul>
+                        <li>Discover authentic, locally popular food spots</li>
+                        <li>Plan meals efficiently within a budget</li>
+                        <li>Explore cultural significance and must-try dishes</li>
+                        <li>Avoid overpriced or overly commercialized restaurants</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Key Features</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Local Food Recommendations</td>
+                                <td>Suggests eateries popular with locals but often hidden from mainstream platforms
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Budget-Based Meal Planning</td>
+                                <td>Calculates per-person meal costs based on user budget and group size</td>
+                            </tr>
+                            <tr>
+                                <td>Must-Try Dishes</td>
+                                <td>Highlights popular dishes for each recommended restaurant</td>
+                            </tr>
+                            <tr>
+                                <td>Local Food Heritage</td>
+                                <td>Provides background stories, cultural insights and why each restaurant is famous
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Search and Filter</td>
+                                <td>Enables users to quickly find food spots by name, cuisine or budget</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3> Target Users</h3>
+                    <ul>
+                        <li>Travelers seeking authentic culinary experiences</li>
+                        <li>Budget-conscious individuals</li>
+                        <li>People interested in local culture and food heritage</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Project Goals</h3>
+                    <ul>
+                        <li>Provide travelers with reliable, authentic local food information</li>
+                        <li>Enable budget-friendly meal planning</li>
+                        <li>Ensure high-quality, maintainable code with automated linting and formatting</li>
+                        <li>Demonstrate professional development workflow with Git, commit standards and hooks</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Future Extensions</h3>
+                    <ul>
+                        <li>Location-based suggestions</li>
+                        <li>User reviews and ratings</li>
+                        <li>Multi-language support</li>
+                        <li>Offline storage for saved recommendations</li>
+                    </ul>
+                </div>
+
+            </section>
+
+
+            <section class="content" id="plan">
+                <h2>Plan & Analysis</h2>
+
+                <div class="card">
+                    <h3> Project Planning Overview</h3>
+                    <p>
+                        The LocalBites project was planned with a focus on cultural authenticity.
+                        As the application targets travelers.
+                    </p>
+
+                </div>
+
+                <div class="card">
+                    <h3> Requirement Analysis</h3>
+                    <ul>
+                        <li>Display locally popular food places</li>
+                        <li>Search and filter food places</li>
+                        <li>Budget-based meal planning</li>
+                        <li>Highlight must-try dishes</li>
+                        <li>Explain cultural or historical significance</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> User Flow Analysis</h3>
+                    <ol>
+                        <li>User opens the LocalBites application</li>
+                        <li>Views recommended local food places</li>
+                        <li>Searches or filters by preference</li>
+                        <li>Enters budget and number of people</li>
+                        <li>Receives suitable food suggestions</li>
+                        <li>Views dishes and cultural significance</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h3> Design Planning (Wireframes)</h3>
+                    <p>Low-fidelity wireframes were created to:</p>
+                    <ul>
+                        <li>Define layout before implementation</li>
+                        <li>Identify major UI sections</li>
+                        <li>Reduce rework during development</li>
+                    </ul>
+                    <p>Focus areas included header navigation, search & filters, food cards and detail views.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Technical Planning</h3>
+                    <ul>
+                        <li><strong>HTML</strong> – semantic structure</li>
+                        <li><strong>CSS</strong> – layout and styling</li>
+                        <li><strong>JavaScript</strong> – interactivity and logic</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Development Environment</h3>
+                    <ul>
+                        <li>NVM for Node.js version management</li>
+                        <li>Node.js (LTS) for tooling</li>
+                        <li>Git for version control</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Code Quality & Automation</h3>
+                    <ul>
+                        <li>ESLint – JavaScript linting</li>
+                        <li>Stylelint – CSS linting</li>
+                        <li>Prettier – formatting consistency</li>
+                        <li>Husky & lint-staged – pre-commit checks</li>
+                        <li>Commitlint – Conventional Commits</li>
+                    </ul>
+                </div>
+
+            </section>
+
+
+            <section class="content" id="tech">
+                <h2>Technology Stack</h2>
+                <pre>
+                - JavaScript (ES6+)
+                - CSS
+                - Node.js
+                - Jest
+                - GitHub Actions
+                </pre>
+            </section>
+
+            <section class="content" id="setup">
+                <h2>Setup</h2>
+                <pre>
+                    - git clone https://github.com/gnaneshwar718/LocalBites.git
+                    - npm install
+                    - npm run prepare
+                    - open public/index.html in a browser
+                </pre>
+            </section>
+
+
+        </main>
+
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll(".level");
+        const sections = document.querySelectorAll(".content");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                buttons.forEach(b => b.classList.remove("active"));
+                sections.forEach(s => s.classList.remove("active"));
+
+                btn.classList.add("active");
+                document.getElementById(btn.dataset.target).classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
