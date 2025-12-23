@@ -84,18 +84,27 @@ body {
   line-height: 1.7;
   margin-bottom: 0.8rem;
 }
-
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+ li {
+  padding: 0.35rem 0 0.35rem 1rem; /* small top & bottom space */
+  margin-bottom: 0.35rem;         /* tight vertical rhythm */
+  border-left: 3px solid #f97316;
+}
+li:first-child {
+  margin-top: 2rem;
+}
 pre {
   background: #fff3e6;
   padding: 1rem;
-  border-left: 4px solid #f4a261;
   border-radius: 6px;
   overflow-x: auto;
 }
 
 .card {
   background: #fff;
-  border-left: 4px solid #f4a261;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
@@ -203,6 +212,37 @@ pre {
 .gallery .next {
   right: 10px;
 }
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tech-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.tech-list i {
+  font-size: 1.2rem;
+  color: #ff9800; /* adjust to your theme */
+}
+
+pre {
+  color: #000000;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+code {
+  font-family: "Fira Code", monospace;
+}
+
 
 @media (max-width: 768px) {
   .gallery .nav {
