@@ -163,32 +163,35 @@
 
                 <div class="card">
                     <h3>Technical Planning</h3>
-                    <ul>
-                        <li><strong>HTML</strong> – semantic structure</li>
-                        <li><strong>CSS</strong> – layout and styling</li>
-                        <li><strong>JavaScript</strong> – interactivity and logic</li>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-code"></i> Semantic HTML structure</li>
+                        <li><i class="fa-solid fa-palette"></i> CSS layout and styling</li>
+                        <li><i class="fa-solid fa-bolt"></i> JavaScript interactivity</li>
                     </ul>
                 </div>
+
 
                 <div class="card">
                     <h3>Development Environment</h3>
-                    <ul>
-                        <li>NVM for Node.js version management</li>
-                        <li>Node.js (LTS) for tooling</li>
-                        <li>Git for version control</li>
+                    <ul class="icon-list">
+                        <li><i class="fa-brands fa-node-js"></i> NVM & Node.js (LTS)</li>
+                        <li><i class="fa-solid fa-terminal"></i> VS Code on Lubuntu</li>
+                        <li><i class="fa-brands fa-git-alt"></i> Git version control</li>
                     </ul>
                 </div>
 
+
                 <div class="card">
-                    <h3> Code Quality & Automation</h3>
-                    <ul>
-                        <li>ESLint – JavaScript linting</li>
-                        <li>Stylelint – CSS linting</li>
-                        <li>Prettier – formatting consistency</li>
-                        <li>Husky & lint-staged – pre-commit checks</li>
-                        <li>Commitlint – Conventional Commits</li>
+                    <h3>Code Quality & Automation</h3>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-check"></i> ESLint (JavaScript)</li>
+                        <li><i class="fa-solid fa-paintbrush"></i> Stylelint (CSS)</li>
+                        <li><i class="fa-solid fa-ruler-combined"></i> Prettier formatting</li>
+                        <li><i class="fa-solid fa-shield"></i> Husky & lint-staged</li>
+                        <li><i class="fa-solid fa-message"></i> Commitlint</li>
                     </ul>
                 </div>
+
 
             </section>
 
@@ -255,23 +258,60 @@
                     </li>
                 </ul>
             </section>
-
             <section class="content" id="setup">
                 <h2>Setup</h2>
-                <p>Run the following commands in your terminal:</p>
 
-                <pre>
-                    <code>
-                        git clone https://github.com/gnaneshwar718/LocalBites.git
-                        cd LocalBites
-                        npm install
-                        npm run prepare
-                        npm run test:auto
-                    </code>
-            </pre>
+                <p>
+                    Follow these steps to run the LocalBites project on your system.
+                </p>
+
+                <h4>Step 1: Open the Terminal</h4>
+                <p>
+                    Open your terminal application
+                </p>
+
+                <h4>Step 2: Download the Project</h4>
+                <p>
+                    This command copies the project from GitHub to your computer.
+                </p>
+
+                <pre><code>git clone https://github.com/gnaneshwar718/LocalBites.git</code></pre>
+
+                <h4>Step 3: Go Inside the Project Folder</h4>
+                <p>
+                    Move into the project directory that was just downloaded.
+                </p>
+
+                <pre><code>cd LocalBites</code></pre>
+
+                <h4>Step 4: Install Required Tools</h4>
+                <p>
+                    This installs all required packages needed for the project to work.
+                </p>
+
+                <pre><code>npm install</code></pre>
+
+                <h4>Step 5: Set Up Git Hooks</h4>
+                <p>
+                    This step enables automatic code checks before committing changes.
+                </p>
+
+                <pre><code>npm run prepare</code></pre>
+
+                <h4>Step 6: Run Automated Tests</h4>
+                <p>
+                    This command runs tests automatically whenever files change.
+                </p>
+
+                <pre><code>npm run test:auto</code></pre>
+
+                <h4>Step 7: Open the Application</h4>
+                <p>
+                    Open the project in a browser by double-clicking the file below:
+                </p>
+
+                <pre><code>public/index.html</code></pre>
             </section>
-
-
 
         </main>
 

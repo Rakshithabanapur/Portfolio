@@ -61,7 +61,6 @@ body {
   position: relative;
   overflow-y: auto;
 }
-
 .content {
   display: none;
   animation: fade 0.4s ease;
@@ -71,19 +70,63 @@ body {
   display: block;
 }
 
+/* Section heading */
 .content h2 {
-  margin-bottom: 1rem;
-  color: #f4a261; 
-  border-bottom: 2px solid #f4a261;
+  margin-bottom: 1.2rem;
+  color: #f4a261;
   display: inline-block;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.3rem;
 }
 
-.content p,
-.content li {
-  line-height: 1.7;
-  margin-bottom: 0.8rem;
+/* Sub-headings (Step titles) */
+.content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #333;
 }
+
+/* Paragraphs */
+.content p {
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  color: #555;
+  max-width: 720px;
+}
+
+/* Code blocks */
+.content pre {
+  background: #ffecd1; /* dark slate */
+  color: #000000;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.5rem 0 1rem;
+  max-width: 720px;
+}
+
+.content code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+}
+
+/* Inline emphasis */
+.content strong {
+  color: #111;
+}
+
+/* Smooth fade */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 ul{
   list-style: none;
   padding-left: 0;
