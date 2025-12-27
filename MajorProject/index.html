@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalBites</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -11,7 +12,7 @@
 
 <body>
 
-    <div class="arcade">
+    <div class="LocalBites">
 
         <aside class="sidebar">
             <h1 class="logo">LocalBites</h1>
@@ -208,15 +209,15 @@
                     <p>
                         <a href="https://www.figma.com/proto/4a6cp5cFDqleN4xgqS8uym/Untitled?node-id=111-12&t=yK7bf20dGnNYuwXX-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=111%3A12&show-proto-sidebar=1"
                             target="_blank" rel="noopener noreferrer" class="figma-link">
-                            <i class="fa-solid fa-link"></i>
+                            <img src="wireframes/figmaLogo.svg">
                             View full wireframes on Figma
                         </a>
                     </p>
                 </div>
                 <div class="card">
                     <div class="gallery">
-                        <button class="nav prev">&#10094;</button>
-
+                    <button class="nav prev">&#10094;</button>
+                    
                         <div class="gallery-track">
                             <img src="wireframes/signIn.svg" alt="sign In page">
                             <img src="wireframes/signUp.svg" alt="sign Up page">
@@ -227,37 +228,88 @@
                             <img src="wireframes/culture.svg" alt="culture Page">
                         </div>
 
-                        <button class="nav next">&#10095;</button>
+                    <button class="nav next">&#10095;</button>
                     </div>
                 </div>
             </section>
 
             <section class="content" id="tech">
                 <h2>Technology Stack</h2>
+                <div class="tech-grid">
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="../HTML-icon.png" alt="HTML">
+                        </div>
+                        <h3 class="tech-name"><strong>HTML:</strong> Semantic page structure</h3>
+                    </div>
 
-                <ul class="tech-list">
-                    <li>
-                        <i class="fa-brands fa-js"></i>
-                        JavaScript (ES6+)
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        CSS
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-node-js"></i>
-                        Node.js
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-vial"></i>
-                        Jest
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-github"></i>
-                        GitHub Actions
-                    </li>
-                </ul>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="../css-icon.png" alt="CSS">
+                        </div>
+                        <h3 class="tech-name"><strong>CSS:</strong> Responsive UI styling</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="../js-icon.png" alt="JavaScript">
+                        </div>
+                        <h3 class="tech-name"><strong>JavaScript:</strong> Interactive application logic</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/nodejs-logo.svg" alt="Node.js">
+                    </div>
+                    <h3 class="tech-name"><strong>Node.js:</strong> Runtime environment</h3>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/prettier.png" alt="Prettier">
+                        </div>
+                        <h3 class="tech-name"><strong>Prettier:</strong> Code formatter</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/eslint.svg" alt="ESLint">
+                        </div>
+                        <h3 class="tech-name"><strong>ESLint:</strong> JavaScript code quality</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/stylelint.svg" alt="Stylelint">
+                        </div>
+                        <h3 class="tech-name"><strong>Stylelint:</strong> CSS consistency rules</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/husky.png" alt="Husky">
+                        </div>
+                        <h3 class="tech-name"><strong>Husky:</strong> Pre-commit Git hooks</h3>
+                        </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/Jest.svg" alt="Jest">
+                        </div>
+                        <h3 class="tech-name"><strong>Jest:</strong> Unit testing framework</h3>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <img src="Assets/techIcons/githubactions.svg" alt="GitHub Actions">
+                        </div>
+                        <h3 class="tech-name"><strong>GitHub Actions:</strong> Continuous integration workflows</h3>
+                    </div>
+                </div>
             </section>
+
+
             <section class="content" id="setup">
                 <h2>Setup</h2>
 
@@ -331,26 +383,32 @@
             });
         });
 
-        const track = document.querySelector(".gallery-track");
-        const images = document.querySelectorAll(".gallery-track img");
-        const prev = document.querySelector(".prev");
-        const next = document.querySelector(".next");
+          const gallery = document.querySelector(".gallery");
 
-        let index = 0;
+  if (gallery) {
+    const track = gallery.querySelector(".gallery-track");
+    const slides = gallery.querySelectorAll(".gallery-track img");
+    const prevBtn = gallery.querySelector(".prev");
+    const nextBtn = gallery.querySelector(".next");
 
-        function updateGallery() {
-            track.style.transform = `translateX(-${index * 100}%)`;
-        }
+    let index = 0;
+    const total = slides.length;
 
-        next.addEventListener("click", () => {
-            index = (index + 1) % images.length;
-            updateGallery();
-        });
+    function updateGallery() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-        prev.addEventListener("click", () => {
-            index = (index - 1 + images.length) % images.length;
-            updateGallery();
-        });
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % total;
+      updateGallery();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + total) % total;
+      updateGallery();
+    });
+  }
+
     </script>
 
 </body>

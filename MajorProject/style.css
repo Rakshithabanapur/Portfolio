@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +7,28 @@
 }
 
 body {
-  background: #fef8f3; 
-  color: #333; 
-  height: 100vh;
+  background: #fef8f3;
+  color: #333;
+  min-height: 100vh;
 }
 
-.arcade { 
+.LocalBites {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .sidebar {
-  width: 280px;
-  background: #ffecd1; 
-  border-right: 2px solid #f4a261; 
-  padding: 2rem 1.2rem;
+  width: clamp(14rem, 22vw, 18rem);
+  background: #ffecd1;
+  border-right: 0.15rem solid #f4a261;
+  padding: clamp(1.2rem, 3vw, 2rem) 1.2rem;
 }
 
 .logo {
   text-align: center;
-  color: #e76f51; 
+  color: #e76f51;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
   font-weight: bold;
 }
 
@@ -39,28 +40,31 @@ body {
 
 .level {
   background: transparent;
-  border: 2px solid #e76f51;
+  border: 0.15rem solid #e76f51;
   color: #e76f51;
-  padding: 0.7rem;
   cursor: pointer;
-  font-size: 1rem;
-  border-radius: 6px;
-  transition: 0.3s;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  padding: clamp(0.4rem, 1.5vw, 0.7rem)
+           clamp(0.6rem, 2.5vw, 1rem);
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
+
 
 .level:hover,
 .level.active {
   background: #e76f51;
   color: #fff;
-  box-shadow: 0 4px 10px rgba(231, 111, 81, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(231, 111, 81, 0.3);
 }
 
 .screen {
   flex: 1;
-  padding: 3rem;
-  position: relative;
+  padding: clamp(1.5rem, 4vw, 3rem);
   overflow-y: auto;
 }
+
 .content {
   display: none;
   animation: fade 0.4s ease;
@@ -70,151 +74,94 @@ body {
   display: block;
 }
 
-/* Section heading */
 .content h2 {
   margin-bottom: 1.2rem;
   color: #f4a261;
-  display: inline-block;
-  padding-bottom: 0.3rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
 }
 
-/* Sub-headings (Step titles) */
 .content h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.4rem;
   font-size: 1rem;
-  color: #333;
 }
 
-/* Paragraphs */
 .content p {
   line-height: 1.7;
   margin-bottom: 0.6rem;
   color: #555;
-  max-width: 720px;
-}
-
-/* Code blocks */
-.content pre {
-  background: #ffecd1; /* dark slate */
-  color: #000000;
-  padding: 0.9rem 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
-  margin: 0.5rem 0 1rem;
-  max-width: 720px;
-}
-
-.content code {
-  font-family: "Fira Code", monospace;
-  font-size: 0.9rem;
-}
-
-/* Inline emphasis */
-.content strong {
-  color: #111;
-}
-
-/* Smooth fade */
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-ul{
-  list-style: none;
-  padding-left: 0;
-}
- li {
-  padding: 0.35rem 0 0.35rem 1rem; /* small top & bottom space */
-  margin-bottom: 0.35rem;         /* tight vertical rhythm */
-  border-left: 3px solid #f97316;
-}
-li:first-child {
-  margin-top: 2rem;
-}
-pre {
-  background: #fff3e6;
-  padding: 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
+  max-width: 100%;
 }
 
 .card {
   background: #fff;
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(1rem, 3vw, 1.5rem);
   margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
   color: #e76f51;
   margin-bottom: 0.6rem;
-}
-
-.card h4 {
-  color: #f4a261;
-  margin-top: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.card ul,
-.card ol {
-  padding-left: 1.2rem;
-  line-height: 1.6;
-}
-
-.card li {
-  opacity: 0.9;
-}
-
-.card.highlight {
-  background: #fff7f0;
-  border-left-color: #e76f51;
-}
-
-.card table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0.8rem;
-}
-
-.card table th,
-.card table td {
-  border: 1px solid #f4a261;
-  padding: 0.6rem;
-  text-align: left;
-}
-
-.card table th {
-  background-color: #ffe6cc;
-  color: #e76f51;
-}
-
-.card table td {
-  background-color: #fff3e6;
+  font-size: 1.1rem;
 }
 
 .card ul {
   padding-left: 1.2rem;
 }
 
-.card ul li {
-  margin-bottom: 0.4rem;
+.card li {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.card table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.card table th,
+.card table td {
+  border: 0.08rem solid #f4a261;
+  padding: 0.6em;
+}
+
+.card table th {
+  background: #ffe6cc;
+  color: #e76f51;
+}
+
+.card table td {
+  background: #fff3e6;
+}
+
+pre {
+  background: #fff3e6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  max-width: 100%;
+}
+
+code {
+  font-family: "Fira Code", monospace;
 }
 
 .gallery {
+  width: 100%;
+  height: clamp(18rem, 45vw, 32rem);
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  height: clamp(22rem, 45vw, 34rem);
+  border-radius: 1rem;
 }
 
 .gallery-track {
@@ -224,83 +171,178 @@ pre {
 }
 
 .gallery-track img {
+  flex: 0 0 100%;
   width: 100%;
-  flex-shrink: 0;
-  border-radius: 12px;
+  height: 100%;
+  object-fit: contain;
 }
 
 .gallery .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;  
+  z-index: 10;
+
+  width: clamp(2.2rem, 5vw, 2.8rem);
+  height: clamp(2.2rem, 5vw, 2.8rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: rgba(231, 111, 81, 0.9);
-  color: white;
+  color: #fff;
   border: none;
-  padding: 0.6rem 0.9rem;
-  cursor: pointer;
-  font-size: 1.4rem;
   border-radius: 50%;
-  transition: 0.3s;
+
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background 0.2s ease;
 }
+
 
 .gallery .nav:hover {
   background: #e76f51;
+  transform: translateY(-50%) scale(1.1);
 }
 
-.gallery .prev {
-  left: 10px;
+.gallery .prev { left: 1rem; }
+.gallery .next { right: 1rem; }
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 2.5rem;
 }
 
-.gallery .next {
-  right: 10px;
-}
-.tech-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+.tech-card {
+  background: transparent;
+  border-radius: 1rem;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  text-align: center;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.tech-list li {
+.tech-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 1rem;
-  margin-bottom: 0.7rem;
+  justify-content: center;
 }
 
-.tech-list i {
-  font-size: 1.2rem;
-  color: #ff9800; /* adjust to your theme */
+.tech-icon img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  filter: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-pre {
+.tech-name {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #000000;
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(0.4rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-code {
-  font-family: "Fira Code", monospace;
+.tech-card:hover .tech-icon img {
+  transform: scale(1.35);
+  opacity: 1;
 }
 
+.tech-card:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-@media (max-width: 768px) {
-  .gallery .nav {
-    font-size: 1.1rem;
-    padding: 0.5rem 0.7rem;
-  }
+.figma-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: #5651e7;
+  font-weight: 500;
+}
+
+.figma-link img {
+  width: 4rem;
+  height: 4rem;
 }
 
 @keyframes fade {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(0.6rem);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+@media (max-width: 62.5rem) {
+  .LocalBites {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 0.15rem solid #f4a261;
+  }
+
+  .levels {
+    flex-direction: row;
+    gap: 0.6rem;
+    overflow-x: auto;
+  }
+
+  .screen {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .gallery .nav {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.1rem;   
+    padding: 0;          
+  }
+
+  .gallery .prev {
+    left: 0.1rem;
+  }
+
+  .gallery .next {
+    right: 0.1rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .tech-name {
+    opacity: 1;
+    transform: none;
+  }
+}
+
